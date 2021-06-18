@@ -1,0 +1,203 @@
+﻿@model citasm.Models.Cita
+
+@{
+    ViewData["Title"] = "Datos del Paciente";
+}
+
+<h2>Datos del Paciente</h2>
+
+<hr/>
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+
+
+
+               
+                    <div class="row">
+                        <h5>Nombres y Apellidos del paciente </h5>
+                        <div class="col">
+                            <input asp-for="CitapNombre" class="form-control" />
+                            <span asp-validation-for="CitapNombre" class="text-danger"></span>
+                            <label asp-for="CitapNombre" class="control-label"></label>
+                        </div>
+                        <div class="col">
+                            <input asp-for="CitapSeNombre" class="form-control" />
+                            <span asp-validation-for="CitapSeNombre" class="text-danger"></span>
+                            <label asp-for="CitapSeNombre" class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+                            <input asp-for="CitapApellido" class="form-control" />
+                            <span asp-validation-for="CitapApellido" class="text-danger"></span>
+                            <label asp-for="CitapApellido" class="control-label"></label>
+                        </div>
+                    </div>
+                
+
+               
+                    <div class="row">
+                        <h5>Correo Electronico </h5>
+                        <div class="col">
+
+                            <input asp-for="CitapCorreo" class="form-control" />
+                            <span asp-validation-for="CitapCorreo" class="text-danger"></span>
+                            <label asp-for="CitapCorreo" class="control-label"></label>
+
+                        </div>
+                    </div>
+             
+
+
+
+
+
+
+
+
+             
+                    <div class="row">
+                        <h5>Nombre del Acompañante </h5>
+                        <div class="col">
+
+                            <input asp-for="CitapAcomNombre" class="form-control" />
+                            <span asp-validation-for="CitapAcomNombre" class="text-danger"></span>
+                            <label asp-for="CitapAcomNombre" class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitaAcomApellido" class="form-control" />
+                            <span asp-validation-for="CitaAcomApellido" class="text-danger"></span>
+                            <label asp-for="CitaAcomApellido" class="control-label"></label>
+
+                        </div>
+                    </div>
+                
+
+
+
+
+
+                
+                    <div class="row">
+                        <h5>Direccion </h5>
+                        <div class="col">
+
+                            <input asp-for="CitapDireccion" class="form-control" />
+                            <span asp-validation-for="CitapDireccion" class="text-danger"></span>
+                            <label asp-for="CitapDireccion" class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitapDirecciondos" class="form-control" />
+                            <span asp-validation-for="CitapDirecciondos" class="text-danger"></span>
+                            <label asp-for="CitapDirecciondos" class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitapCuidad" class="form-control" />
+                            <span asp-validation-for="CitapCuidad" class="text-danger"></span>
+                            <label asp-for="CitapCuidad" class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitapEstadop" class="form-control" />
+                            <span asp-validation-for="CitapEstadop" class="text-danger"></span>
+                            <label asp-for="CitapEstadop " class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+
+                            <input asp-for="CitapCodigop" class="form-control" />
+                            <span asp-validation-for="CitapCodigop" class="text-danger"></span>
+                            <label asp-for="CitapCodigop " class="control-label"></label>
+
+                        </div>
+
+                    </div>
+                
+
+
+
+
+
+               
+                    <div class="row">
+                        <h5>Numero de telefono </h5>
+                        <div class="col">
+                            <input asp-for="CitapTelefonoArea" class="form-control" />
+                            <span asp-validation-for="CitapTelefonoArea" class="text-danger"></span>
+                            <label asp-for="CitapTelefonoArea " class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitapNumero" class="form-control" />
+                            <span asp-validation-for="CitapNumero" class="text-danger"></span>
+                            <label asp-for="CitapNumero " class="control-label"></label>
+
+                        </div>
+                    </div>
+                
+
+
+
+
+
+
+
+               
+                    <div class="row">
+                        <h5>Numero de WhatsApp </h5>
+                        <div class="col">
+                            <input asp-for="CitapAreaW" class="form-control" />
+                            <span asp-validation-for="CitapAreaW" class="text-danger"></span>
+                            <label asp-for="CitapAreaW " class="control-label"></label>
+
+                        </div>
+                        <div class="col">
+
+                            <input asp-for="CitapNumeroW" class="form-control" />
+                            <span asp-validation-for="CitapNumeroW" class="text-danger"></span>
+                            <label asp-for="CitapNumeroW " class="control-label"></label>
+                        </div>
+                    </div>
+               
+              
+
+
+
+
+
+
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-warning"> Regresar</a>
+
+
+                    </div>
+
+        </form>
+
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+    }
+}

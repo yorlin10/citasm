@@ -1,0 +1,50 @@
+﻿@model IEnumerable<citasm.Models.Cita>
+
+@{
+    ViewData["Title"] = "CITAS";
+
+
+    <h2>Lista de Citas</h2>
+
+    <p>
+        <a asp-action="Create" class="btn-danger">Nueva</a>
+
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CitapNombre)
+                </th>
+                <th></th>
+
+            </tr>
+
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(ModelItem => item.CitapNombre) </td>
+                    <td>
+                        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.citaId">Editar</a>
+                        <a asp-action="Details" class="btn btn-warning" asp-route-id="@item.citaId">Detalles</a>
+                        <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.citaId">Borrar</a>
+                    </td>
+
+                </tr>
+
+            }
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+}
+

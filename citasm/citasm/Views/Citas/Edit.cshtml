@@ -1,0 +1,130 @@
+﻿@model citasm.Models.Cita
+
+@{
+    ViewData["Title"] = "Editar Cita";
+}
+
+<h2>Editar</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="citaId" />
+            <div class="form-group">
+
+                <input asp-for="CitapNombre" class="form-control" />
+                <span asp-validation-for="CitapNombre" class="text-danger"></span>
+                <label asp-for="CitapNombre" class="control-label"></label>
+
+
+
+                <input asp-for="CitapSeNombre" class="form-control" />
+                <span asp-validation-for="CitapSeNombre" class="text-danger"></span>
+                <label asp-for="CitapSeNombre" class="control-label"></label>
+
+
+
+                <input asp-for="CitapApellido" class="form-control" />
+                <span asp-validation-for="CitapApellido" class="text-danger"></span>
+                <label asp-for="CitapApellido" class="control-label"></label>
+
+
+
+
+                <input asp-for="CitapCorreo" class="form-control" />
+                <span asp-validation-for="CitapCorreo" class="text-danger"></span>
+                <label asp-for="CitapCorreo" class="control-label"></label>
+
+
+
+                <input asp-for="CitapAcomNombre" class="form-control" />
+                <span asp-validation-for="CitapAcomNombre" class="text-danger"></span>
+                <label asp-for="CitapAcomNombre" class="control-label"></label>
+
+
+
+                <input asp-for="CitapDirecciondos" class="form-control" />
+                <span asp-validation-for="CitapDirecciondos" class="text-danger"></span>
+                <label asp-for="CitapDirecciondos" class="control-label"></label>
+
+
+                <input asp-for="CitaAcomApellido" class="form-control" />
+                <span asp-validation-for="CitaAcomApellido" class="text-danger"></span>
+                <label asp-for="CitaAcomApellido" class="control-label"></label>
+
+
+
+
+
+                <input asp-for="CitapDireccion" class="form-control" />
+                <span asp-validation-for="CitapDireccion" class="text-danger"></span>
+                <label asp-for="CitapDireccion" class="control-label"></label>
+
+
+
+                <input asp-for="CitapCuidad" class="form-control" />
+                <span asp-validation-for="CitapCuidad" class="text-danger"></span>
+                <label asp-for="CitapCuidad" class="control-label"></label>
+
+
+
+                <input asp-for="CitapEstadop" class="form-control" />
+                <span asp-validation-for="CitapEstadop" class="text-danger"></span>
+                <label asp-for="CitapEstadop " class="control-label"></label>
+
+
+
+
+                <input asp-for="CitapCodigop" class="form-control" />
+                <span asp-validation-for="CitapEstadop" class="text-danger"></span>
+                <label asp-for="CitapCodigop " class="control-label"></label>
+
+
+
+                <input asp-for="CitapTelefonoArea" class="form-control" />
+                <span asp-validation-for="CitapTelefonoArea" class="text-danger"></span>
+                <label asp-for="CitapTelefonoArea " class="control-label"></label>
+
+
+
+                <input asp-for="CitapNumero" class="form-control" />
+                <span asp-validation-for="CitapNumero" class="text-danger"></span>
+                <label asp-for="CitapNumero " class="control-label"></label>
+
+
+
+
+                <input asp-for="CitapAreaW" class="form-control" />
+                <span asp-validation-for="CitapAreaW" class="text-danger"></span>
+                <label asp-for="CitapAreaW " class="control-label"></label>
+
+
+
+
+                <input asp-for="CitapNumeroW" class="form-control" />
+                <span asp-validation-for="CitapNumeroW" class="text-danger"></span>
+                <label asp-for="CitapNumeroW " class="control-label"></label>
+
+
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-warning"> Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+    }
+}

@@ -1,0 +1,218 @@
+﻿@model citasm.Models.Cita
+
+@{
+
+    ViewData["Title"] = "Detalles";
+
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Datos del Paciente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+
+            @Html.DisplayNameFor(model => model.CitapNombre)
+        </dt>
+
+        <dd class="col-sm-2">
+
+            @Html.DisplayFor(model => model.CitapNombre)
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+
+            @Html.DisplayNameFor(model => model.CitapSeNombre)
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapApellido)
+
+
+        </dd>
+    </dl>
+
+
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapCorreo)
+
+        </dt>
+
+        <dd class="col-sm-5">
+            @Html.DisplayFor(model => model.CitapCorreo)
+
+
+        </dd>
+    </dl>
+
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapAcomNombre)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapAcomNombre)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitaAcomApellido)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitaAcomApellido)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapDireccion)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapDireccion)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapDirecciondos)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapDirecciondos)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapCuidad)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapCuidad)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapEstadop)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapEstadop)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapCodigop)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapCodigop)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapTelefonoArea)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapTelefonoArea)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapNumero)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapNumero)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapAreaW)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapAreaW)
+
+
+        </dd>
+    </dl>
+
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CitapNumeroW)
+
+        </dt>
+
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.CitapNumeroW)
+
+
+        </dd>
+    </dl>
+
+</div>
+
+<div>
+    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.citaId">Editar</a>
+
+    <a asp-action="Index" class="btn btn-warning">Regresar</a>
+</div>
