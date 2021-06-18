@@ -2,49 +2,63 @@
 
 @{
     ViewData["Title"] = "CITAS";
+    
+    
+    }
 
 
-    <h2>Lista de Citas</h2>
+<h2>Lista de Citas</h2>
 
-    <p>
+
+<div class="row search">
+    <div class="col-auto">
+        <input type="text" class="form-control-plaintext" id="txt-search" placeholder="Buscar..." />
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-info" onclick="Citas_search()" id="search-link"><i class="fas fa-search"></i></a>
         <a asp-action="Create" class="btn-danger">Nueva</a>
+    </div>
+</div>
 
-    </p>
 
-    <table class="table">
-        <thead>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CitapNombre)
+            </th>
+            <th></th>
+
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.CitapNombre)
-                </th>
-                <th></th>
+                <td>@Html.DisplayFor(ModelItem => item.CitapNombre) </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.citaId">Editar</a>
+                    <a asp-action="Details" class="btn btn-warning" asp-route-id="@item.citaId">Detalles</a>
+                    <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.citaId">Borrar</a>
+                </td>
 
             </tr>
 
+        }
 
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@Html.DisplayFor(ModelItem => item.CitapNombre) </td>
-                    <td>
-                        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.citaId">Editar</a>
-                        <a asp-action="Details" class="btn btn-warning" asp-route-id="@item.citaId">Detalles</a>
-                        <a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.citaId">Borrar</a>
-                    </td>
-
-                </tr>
-
-            }
-
-        </tbody>
+    </tbody>
 
 
 
-    </table>
+</table>
 
 
+<script src="~/js/Citas.js" asp-append-version="true"></script>
 
-}
+
 

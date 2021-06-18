@@ -19,11 +19,14 @@ namespace citasm.Controllers
             this.db = db;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
 
         {
-
-            return View(await db.Citas.ToListAsync());
+            if (search == null)
+            {
+                return View(await db.Citas.ToListAsync());
+            }
+            return View(await db.Citas.Where(c => c.CitapNombre.Contains(search)).ToListAsync());
         }
 
 
